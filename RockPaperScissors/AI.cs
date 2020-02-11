@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Human
+    class AI : Player
     {
 
     }

@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    abstract class Player
+    abstract class Gestures
     {
-        public string choice;
-
     }
 }
