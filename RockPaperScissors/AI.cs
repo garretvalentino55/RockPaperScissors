@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class AI : Player
+    class AI : Player // will be random
     {
+        //member Variables 
 
+
+            // constructor 
+
+
+            //member methods
+        public override void ChooseGesture()
+        {
+            
+        }
     }
 }

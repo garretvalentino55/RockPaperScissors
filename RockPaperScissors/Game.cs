@@ -9,11 +9,13 @@ namespace RockPaperScissors
     class Game
     {
         //member variables Has A 
-        string player;
+        string player1;
+        string player2;
         int score;
         string winningPlayer;
         int runningTotal;
-
+        Gestures gestures;
+       
         //Constructor spawner
         public Game()
         {
@@ -22,6 +24,35 @@ namespace RockPaperScissors
 
         //member Methods Can DO
 
+  
+        public string GetNumberOfPlayers() 
+        {
+            Console.WriteLine("Would you Like to Play 1 player or 2 players");
+            string numberPlayers = Console.ReadLine();
+            return numberPlayers;
+        }
+        public void SetPlayers(string numberOfPlayers)
+        {
+
+            if (numberOfPlayers == "1")
+            {
+                player1 = new Human();
+                player2 = new AI();
+            }
+            else if (numberOfPlayers == "2") 
+            {
+                player1 = new Human();
+                player2 = new Human();
+            }
+
+        }
+        public void RunGame()
+        {
+            string players = GetNumberOfPlayers();
+            SetPlayers(players);
+            player1.ChooseGestures();
+            player2.ChooseGestures();
+        }
         public void Settings() 
         {
             GameBoundries();
@@ -52,6 +83,7 @@ namespace RockPaperScissors
                         numberOfWrong++;
                 }
             } while (isValid == false && numberOfWrong < 5);
+
  
         }
 

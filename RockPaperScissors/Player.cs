@@ -8,6 +8,23 @@ namespace RockPaperScissors
 {
     abstract class Player
     {
+        //member variables Has A
+        string name;
+        int score;
+        Gestures gestures;
 
+
+
+
+
+        //constructor spawner
+
+
+
+
+
+        //member methods Can do 
+
+        public abstract void ChooseGesture(Player eachPlayer);
     }
 }

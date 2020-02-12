@@ -8,6 +8,34 @@ namespace RockPaperScissors
 {
     class Rock : Gestures
     {
+        //member variables 
 
+        // constructor 
+
+        // member methods 
+        public override int Compare(Gestures otherGesture)
+        {
+            int x = -1;
+            int y = 1;
+            int z = 0;
+
+            if (otherGesture.name == "Paper"|| otherGesture.name == "Spock")
+            {
+                Console.WriteLine("You lose");
+                return x;
+
+            }
+
+            else if (otherGesture.name == "Lizard" || otherGesture.name == "Scissors")
+            {
+                Console.WriteLine("You win");
+                return y;
+            }
+            else
+            {
+                Console.WriteLine("Tie");
+                return z;
+            }
+        }
     }
 }

@@ -8,5 +8,14 @@ namespace RockPaperScissors
 {
     abstract class Gestures
     {
+        //Member Variables 
+        public string name;
+
+
+        //constructor 
+
+        //member methods 
+
+        public abstract int Compare(Gestures otherGesture);
     }
 }
