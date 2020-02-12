@@ -20,11 +20,14 @@ namespace RockPaperScissors
         //constructor spawner
 
 
+        public Player()
+        {
 
+        }
 
 
         //member methods Can do 
 
-        public abstract void ChooseGesture(Player eachPlayer);
+        public abstract int ChooseGesture(Player eachPlayer);
     }
 }
