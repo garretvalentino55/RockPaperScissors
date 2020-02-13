@@ -9,12 +9,13 @@ namespace RockPaperScissors
     class Game
     {
         //member variables Has A 
-        string player1;
-        string player2;
+        Player player1;
+        Player player2;
         int score;
         string winningPlayer;
         int runningTotal;
         Gestures gestures;
+        string players;
        
         //Constructor spawner
         public Game()
@@ -30,62 +31,62 @@ namespace RockPaperScissors
             Console.WriteLine("Would you Like to Play 1 player or 2 players");
             string numberPlayers = Console.ReadLine();
             return numberPlayers;
+
         }
         public void SetPlayers(string numberOfPlayers)
         {
+
 
             if (numberOfPlayers == "1")
             {
                 player1 = new Human();
                 player2 = new AI();
             }
-            else if (numberOfPlayers == "2") 
+            if (numberOfPlayers == "2")
             {
                 player1 = new Human();
                 player2 = new Human();
             }
-
         }
+        public void SelectGameMode(int playernumber)
+        {
+            int players = 0;
+            switch (playernumber)
+             {
+                case 1:
+                players = 1;
+                break;
+              case 2:
+                players = 2;
+                break;
+              default:
+                break;
+                        
+             }
+              Console.ReadLine();
+        }
+       // public string GetGestures() 
+        //{
+            
+
+
+       // }
+
+
+
+
+
         public void RunGame()
         {
-            string players = GetNumberOfPlayers();
-            SetPlayers(players);
-            player1.ChooseGestures();
-            player2.ChooseGestures();
+            string playerOption = GetNumberOfPlayers();
+            SetPlayers(playerOption);
+            int players = Convert.ToInt32(playerOption);
+            SelectGameMode(players);
+            player1.GestureChoice = player1.GestureOptions[player1.ChooseGesture()];
+            player2.GestureChoice = player2.GestureOptions[player2.ChooseGesture()];
+            
         }
-        public void Settings() 
-        {
-            GameBoundries();
-        }
-        public void GameBoundries() 
-        {
-            bool isValid = false;
-            int numberOfWrong = 0;
-            do
-            {
-                Console.WriteLine("Please choose a number on the list to proceed");
-                string input = Console.ReadLine();
-                int userInput = 0;
-                switch (userInput)
-                {
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        break;
-                    default:
-                        Console.WriteLine("Please choose a number from the list");
-                        numberOfWrong++;
-                }
-            } while (isValid == false && numberOfWrong < 5);
-
- 
-        }
-
+        
+      
     }
 }

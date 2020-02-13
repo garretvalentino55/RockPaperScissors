@@ -11,6 +11,10 @@ namespace RockPaperScissors
         //member variables 
 
         // constructor 
+        public Lizard()
+        {
+            name = "Lizard";
+        }
 
         // member methods 
         public override int Compare(Gestures otherGesture)

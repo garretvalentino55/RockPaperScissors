@@ -15,15 +15,12 @@ namespace RockPaperScissors
 
 
         //member methods
-        public override int ChooseGesture(Player eachPlayer) 
+        public override int ChooseGesture() 
         {
             Random random = new Random();
-            random.Next(1, 5);
-            int x = random.Next(1, 5);
+            random.Next(0, 5);
+            int x = random.Next(0, 5);
             return x;
-
-
-
         }
         
             

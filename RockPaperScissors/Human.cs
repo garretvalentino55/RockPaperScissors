@@ -9,13 +9,10 @@ namespace RockPaperScissors
     class Human : Player
     {
         //membere vairables 
-        string[] gestureChoiceArray;
+     
 
         //constructor 
-        public Human()
-        {
-
-        }
+      
 
         //member methods 
 
@@ -43,48 +40,47 @@ namespace RockPaperScissors
                 GestureChoice = GestureOptions[4];
             }
         }
-        public override int ChooseGesture(Player eachPlayer)
+        public override int ChooseGesture()
         {
             int gestureChoice = 0;
-            Console.WriteLine("Your Choices are: ");
             foreach (Gestures gesture in GestureOptions)
             {
-                Console.WriteLine(gesture.name);
+                Console.WriteLine("you can choose " + gesture.name);
 
             }
             string playerChoice = Console.ReadLine();
 
             bool isValid = false;
-            int numberOfWrong = 0;
             do
-
             {
+                
+            
                 switch (playerChoice)
                 {
-                    case "Rock":
+                    case "rock":
                         gestureChoice = 0;
                         break;
-                    case "Paper":
+                    case "paper":
                         gestureChoice = 1;
                         break;
-                    case "Scissors":
+                    case "scissors":
                         gestureChoice = 2;
                         break;
-                    case "Lizard":
+                    case "lizzard":
                         gestureChoice = 3;
                         break;
-                    case "Spock":
+                    case "spock":
                         gestureChoice = 4;
                         break;
                     default:
-                        Console.WriteLine("Please choose a number from the list");
-                        numberOfWrong++;
+                        Console.WriteLine("Please choose an option from the list");
                         break;
                 }
                 Console.ReadLine();
-            } while (isValid == false && numberOfWrong < 5);
+           
+            } while (isValid == false);
 
-
+            return gestureChoice;
 
         }
 

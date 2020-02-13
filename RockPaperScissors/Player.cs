@@ -11,7 +11,8 @@ namespace RockPaperScissors
         //member variables Has A
         string name;
         int score;
-        Gestures gestures;
+        public Gestures GestureChoice;
+        public List<Gestures> GestureOptions = new List<Gestures>();
 
 
 
@@ -22,12 +23,16 @@ namespace RockPaperScissors
 
         public Player()
         {
-
+            GestureOptions.Add(new Rock());
+            GestureOptions.Add(new Paper());
+            GestureOptions.Add(new Scissors());
+            GestureOptions.Add(new Lizard());
+            GestureOptions.Add(new Spock());
         }
 
 
         //member methods Can do 
 
-        public abstract int ChooseGesture(Player eachPlayer);
+        public abstract int ChooseGesture();
     }
 }
