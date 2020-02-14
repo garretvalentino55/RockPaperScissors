@@ -59,18 +59,23 @@ namespace RockPaperScissors
                 {
                     case "rock":
                         gestureChoice = 0;
+                        isValid = true;
                         break;
                     case "paper":
                         gestureChoice = 1;
+                        isValid = true;
                         break;
                     case "scissors":
                         gestureChoice = 2;
+                        isValid = true;
                         break;
                     case "lizzard":
                         gestureChoice = 3;
+                        isValid = true;
                         break;
                     case "spock":
                         gestureChoice = 4;
+                        isValid = true;
                         break;
                     default:
                         Console.WriteLine("Please choose an option from the list");

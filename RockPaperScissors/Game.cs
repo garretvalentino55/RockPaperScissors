@@ -24,6 +24,10 @@ namespace RockPaperScissors
         }
 
         //member Methods Can DO
+        public string DisplayWinner()
+        {
+
+        } 
 
   
         public string GetNumberOfPlayers() 
