@@ -65,12 +65,7 @@ namespace RockPaperScissors
              }
               Console.ReadLine();
         }
-       // public string GetGestures() 
-        //{
-            
-
-
-       // }
+     
 
 
 
@@ -78,13 +73,23 @@ namespace RockPaperScissors
 
         public void RunGame()
         {
-            string playerOption = GetNumberOfPlayers();
-            SetPlayers(playerOption);
-            int players = Convert.ToInt32(playerOption);
-            SelectGameMode(players);
-            player1.GestureChoice = player1.GestureOptions[player1.ChooseGesture()];
-            player2.GestureChoice = player2.GestureOptions[player2.ChooseGesture()];
-            
+            while (true)
+            {
+                Random random = new Random();
+                string playerOption = GetNumberOfPlayers();
+                SetPlayers(playerOption);
+                int players = Convert.ToInt32(playerOption);
+                SelectGameMode(players);
+                player1.GestureChoice = player1.GestureOptions[player1.ChooseGesture()];
+                player2.GestureChoice = player2.GestureOptions[player2.ChooseGesture()];
+                player1.GestureChoice.CompareGestures(player2.GestureChoice);
+
+
+
+
+
+
+            }
         }
         
       

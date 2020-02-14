@@ -16,7 +16,7 @@ namespace RockPaperScissors
             name = "Scissors";
         }
         // member methods 
-        public override int Compare(Gestures otherGesture)
+        public override int CompareGestures(Gestures otherGesture)
         {
             int x = -1;
             int y = 1;

@@ -16,6 +16,6 @@ namespace RockPaperScissors
 
         //member methods 
 
-        public abstract int Compare(Gestures otherGesture);
+        public abstract int CompareGestures(Gestures otherGesture);
     }
 }

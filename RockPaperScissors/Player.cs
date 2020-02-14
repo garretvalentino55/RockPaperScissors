@@ -28,6 +28,7 @@ namespace RockPaperScissors
             GestureOptions.Add(new Scissors());
             GestureOptions.Add(new Lizard());
             GestureOptions.Add(new Spock());
+            
         }
 
 
